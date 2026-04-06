@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SupportStream</title>
+<style>
+body{
+font-family: Arial;
+padding:20px;
+background:#f5f5f5;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+input,select,textarea,button{
+margin:5px;
+padding:8px;
+}
+
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+text-align:left;
+}
+
+.high{
+background:#ffcccc;
+}
+</style>
+</head>
+
+<body>
+
+<h2>SupportStream Ticket System</h2>
+
+<input id="customer" placeholder="Customer Name">
+<input id="subject" placeholder="Subject">
+
+<select id="category">
+<option>Technical</option>
+<option>Billing</option>
+<option>General</option>
+</select>
+
+<select id="urgency">
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+</select>
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<button onclick="addTicket()">Add Ticket</button>
+
+<h3>Tickets</h3>
+
+<table>
+    <thead>
+    <tr>
+    <th>Customer</th>
+    <th>Subject</th>
+    <th>Category</th>
+    <th>Urgency</th>
+    <th>Status</th>
+    <th>Agent</th>
+    <th>Created</th>
+    <th>Actions</th>
+    </tr>
+    </thead>
+    
+    <tbody id="tickets"></tbody>
+    </table>
+<script src="script.js"></script>
+
+</body>
+</html>
